@@ -35,6 +35,17 @@
           background-color: $color-white;
         }
     }
+
+    &--green {
+      background-color: $color-primary;
+      color: $color-white;
+      // padding: 15px 40px;
+      display: inline-block;
+
+      &::after {
+        background-color: $color-primary;
+      }
+    }
   
     &::after {
       content: "";
