@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server",
+    "devserver": "live-server --port=8090",
     "start": "npm-run-all --parallel devserver watch:sass",
-
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 5 versions\" css/style.concat.css -o css/style.prefix.css",
@@ -19,6 +18,7 @@
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "concat": "^1.0.3",
+    "live-server": "^1.2.1",
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1"
