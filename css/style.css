@@ -838,6 +838,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1500;
+  visibility: hidden;
   opacity: 0;
   width: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
@@ -852,7 +853,8 @@ body {
   width: 100%; }
 
 .navigation__item {
-  margin: 1rem; }
+  margin: 1rem;
+  overflow: hidden; }
 
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;
@@ -873,6 +875,9 @@ body {
   background-position: 100%;
   color: #55c57a;
   transform: translateX(1rem); }
+
+.navigation__checkbox ~ .navigation__nav {
+  visibility: visible; }
 
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(80); }
